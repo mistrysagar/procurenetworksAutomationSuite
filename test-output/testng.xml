@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Simple Reporter Suite">
+
+  <parameter name="pdfngreport-properties" value="C:\Users\Rahul-PC\workspace\auctionsoftwareautomation\test-output\pdfngreport.properties" />
+
+ 
+  <listeners>
+    <listener class-name="com.uttesh.pdfngreport.PDFReportListener" />
+  </listeners>
+
+  <test name="Simple Reporter test">
+    <classes>
+      <class name="com.auction.verifications.LiveSale" />
+    
+    </classes>
+  </test>
+</suite>

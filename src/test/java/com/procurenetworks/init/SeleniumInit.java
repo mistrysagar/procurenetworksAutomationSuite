@@ -1,4 +1,4 @@
-package com.procurenetworks.init;
+package test.java.com.procurenetworks.init;
 
 import java.awt.AWTException;
 import java.io.BufferedReader;
@@ -32,9 +32,10 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.procurenetworks.pages.Main_Page;
-import com.procurenetworks.pages.abstractpage.AbstractPage;
-import com.procurenetworks.verifications.ProcureNetworks;
+import test.java.com.procurenetworks.pages.Main_Page;
+import test.java.com.procurenetworks.pages.abstractpage.AbstractPage;
+import test.java.com.procurenetworks.verifications.ProcureNetworks;
+
 
 
 

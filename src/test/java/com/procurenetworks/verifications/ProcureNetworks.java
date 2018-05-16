@@ -1,16 +1,14 @@
-package com.procurenetworks.verifications;
+package test.java.com.procurenetworks.verifications; 
 
 import java.awt.AWTException;
 
 import org.testng.annotations.Test;
 
-import com.procurenetworks.init.Common;
-import com.procurenetworks.init.SeleniumInit;
-import com.procurenetworks.pages.Main_Page;
 
-public class ProcureNetworks extends SeleniumInit {
 
-	Common common = new Common(driver);
+public class ProcureNetworks extends test.java.com.procurenetworks.init.SeleniumInit {
+
+	test.java.com.procurenetworks.init.Common common = new test.java.com.procurenetworks.init.Common(driver);
 
 	public ProcureNetworks() {
 		super();

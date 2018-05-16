@@ -1,4 +1,4 @@
-package com.procurenetworks.init;
+package test.java.com.procurenetworks.init;
 
 /**
  * Define Test Data

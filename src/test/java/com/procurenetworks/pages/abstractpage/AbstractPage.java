@@ -1,4 +1,4 @@
-package com.procurenetworks.pages.abstractpage;
+package test.java.com.procurenetworks.pages.abstractpage;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -12,12 +12,11 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.openqa.selenium.support.pagefactory.ElementLocatorFactory;
 
-import com.procurenetworks.init.Common;
-import com.procurenetworks.init.SeleniumInit;
 
-public abstract class AbstractPage extends SeleniumInit {
 
-	protected Common common = new Common(driver);
+public abstract class AbstractPage extends test.java.com.procurenetworks.init.SeleniumInit {
+
+	protected test.java.com.procurenetworks.init.Common common = new test.java.com.procurenetworks.init.Common(driver);
 
 	String customFiled1 = common.generateRandomChars(5);
 
@@ -37,4 +36,7 @@ public abstract class AbstractPage extends SeleniumInit {
 		this.driver = driver;
 	}
 
+
+	
+	
 }

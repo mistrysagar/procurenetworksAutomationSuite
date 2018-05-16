@@ -18,10 +18,95 @@
 	<parameter name="selenium.url"
 		value="https://inv-pre.qa.procurenetworks.com/auth/login" />
 
+
 	<!-- 1 -->
 	<!-- Procure Network -->
 
 	<test name="Verify Procure network Login">
+
+		<classes>
+
+			<class name="com.procurenetworks.verifications.ProcureNetworks">
+
+				<methods>
+
+					<include name="Procure">
+					</include>
+
+				</methods>
+
+			</class>
+
+		</classes>
+
+	</test>
+	<!-- 2 -->
+	<!-- Procure Network Search Assets -->
+
+	<test name="Verify Procure network Search Asset">
+
+		<classes>
+
+			<class name="com.procurenetworks.verifications.ProcureNetworks">
+
+				<methods>
+
+					<include name="Search_Asset">
+					</include>
+
+				</methods>
+
+			</class>
+
+		</classes>
+
+	</test>
+	<!-- 3 -->
+	<!-- Procure Network Invalid User Name -->
+
+	<test name="Verify Procure network Invalid User Name">
+
+		<classes>
+
+			<class name="com.procurenetworks.verifications.ProcureNetworks">
+
+				<methods>
+
+					<include name="Invalid_Username">
+					</include>
+
+				</methods>
+
+			</class>
+
+		</classes>
+
+	</test>
+	<!-- 4 -->
+	<!-- Procure Network Create New Asset -->
+
+	<test name="Verify Procure network Create New Asset">
+
+		<classes>
+
+			<class name="com.procurenetworks.verifications.ProcureNetworks">
+
+				<methods>
+
+					<include name="Create_New_Asset">
+					</include>
+
+				</methods>
+
+			</class>
+
+		</classes>
+
+	</test>
+	<!-- 5 -->
+	<!-- Procure Network Search Last Created Asset -->
+
+	<test name="Verify Procure network Search Last Created Asset">
 
 		<classes>
 
@@ -39,6 +124,110 @@
 		</classes>
 
 	</test>
+	<!-- 6 -->
+	<!-- Procure Network Search Dropdown List -->
 
+	<test name="Verify Procure network Search Dropdown List">
+
+		<classes>
+
+			<class name="com.procurenetworks.verifications.ProcureNetworks">
+
+				<methods>
+
+					<include name="Asset_Search_Dropdownlist">
+					</include>
+
+				</methods>
+
+			</class>
+
+		</classes>
+
+	</test>
+	<!-- 7 -->
+	<!-- Procure Network dropdown list -->
+
+	<test name="Verify Procure network dropdownlist">
+
+		<classes>
+
+			<class name="com.procurenetworks.verifications.ProcureNetworks">
+
+				<methods>
+
+					<include name="Asset_site_Dropdownlist">
+					</include>
+
+				</methods>
+
+			</class>
+
+		</classes>
+
+	</test>
+	<!-- 8 -->
+	<!-- Procure Network Table Pagination -->
+
+	<test name="Verify Procure network table pagination">
+
+		<classes>
+
+			<class name="com.procurenetworks.verifications.ProcureNetworks">
+
+				<methods>
+
+					<include name="Table_Pagination">
+					</include>
+
+				</methods>
+
+			</class>
+
+		</classes>
+
+	</test>
+	<!-- 9 -->
+	<!-- Procure Network Table Checkbox -->
+
+	<test name="Verify Procure network Table Checkbox">
+
+		<classes>
+
+			<class name="com.procurenetworks.verifications.ProcureNetworks">
+
+				<methods>
+
+					<include name="Check_table_checkbox">
+					</include>
+
+				</methods>
+
+			</class>
+
+		</classes>
+
+	</test>
+	<!-- 10 -->
+	<!-- Procure Network Edit Button -->
+
+	<test name="Verify Procure network Edit Button">
+
+		<classes>
+
+			<class name="com.procurenetworks.verifications.ProcureNetworks">
+
+				<methods>
+
+					<include name="Check_Edit_button">
+					</include>
+
+				</methods>
+
+			</class>
+
+		</classes>
+
+	</test>
 
 </suite> 

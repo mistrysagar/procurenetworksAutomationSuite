@@ -1,4 +1,4 @@
-package com.procurenetworks.pages;
+package test.java.com.procurenetworks.pages;
 
 import java.awt.AWTException;
 import java.awt.Desktop.Action;
@@ -23,12 +23,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.internal.thread.IFutureResult;
 
-import com.procurenetworks.init.Common;
-import com.procurenetworks.pages.abstractpage.AbstractPage;
 
-public class Main_Page extends AbstractPage {
 
-	Common common = new Common(driver);
+public class Main_Page extends test.java.com.procurenetworks.pages.abstractpage.AbstractPage {
+
+	test.java.com.procurenetworks.init.Common common = new test.java.com.procurenetworks.init.Common(driver);
+	
 
 	/**
 	 * Constructor

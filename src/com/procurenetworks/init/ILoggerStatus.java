@@ -1,11 +1,10 @@
-package test.java.com.procurenetworks.init;
+package com.procurenetworks.init;
 
 /**
  * Inferface IloggerStatus
  * 
- * @author Rahul
+ * @author Sagar Mistry
  */
-
 
 public interface ILoggerStatus extends ITestStatus {
 	int NORMAL = 10;

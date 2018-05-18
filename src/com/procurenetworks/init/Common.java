@@ -1,9 +1,11 @@
-package test.java.com.procurenetworks.init;
+package com.procurenetworks.init;
 
 import java.io.File;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Random;
@@ -36,7 +38,7 @@ import org.testng.annotations.Test;
 /**
  * Define Common Webdriver
  * 
- * 
+ * @author Sagar Mistry
  */
 public class Common {
 
@@ -69,8 +71,7 @@ public class Common {
 													// locator
 					try {
 						if (locator.contains(" "))
-							return driver.findElement(By
-									.partialLinkText(locator));
+							return driver.findElement(By.partialLinkText(locator));
 
 						return driver.findElement(By.linkText(locator));
 					} catch (Exception e) {
@@ -129,7 +130,6 @@ public class Common {
 		return null;
 
 	}
-
 
 	public void dismissAlert() {
 
@@ -203,7 +203,6 @@ public class Common {
 
 	}
 
-
 	/**
 	 * Gets current time in the following format Month, Date, Hours, Minutes,
 	 * Seconds, Millisecond.
@@ -216,13 +215,10 @@ public class Common {
 
 		SimpleDateFormat sd = new SimpleDateFormat("MMddHHmmssSS");
 		TimeZone timeZone = TimeZone.getDefault();
-		Calendar cal = Calendar.getInstance(new SimpleTimeZone(timeZone
-				.getOffset(date.getTime()), "GMT"));
+		Calendar cal = Calendar.getInstance(new SimpleTimeZone(timeZone.getOffset(date.getTime()), "GMT"));
 		sd.setCalendar(cal);
 		return sd.format(date);
 	}
-
-	
 
 	/**
 	 * Log given message to Reporter output.
@@ -264,7 +260,6 @@ public class Common {
 		}
 	}
 
-	
 	/**
 	 * Wait up to By element present
 	 * 
@@ -290,8 +285,7 @@ public class Common {
 		String total = "iokijfmnbxcvfrpqsdfgvcxzdferiuytjndifur";
 		StringBuffer buf = new StringBuffer();
 		for (int i = 0; i < length; i++) {
-			char _char = total.charAt((int) (Math.random() * 100)
-					% total.length());
+			char _char = total.charAt((int) (Math.random() * 100) % total.length());
 			buf.append(_char);
 		}
 		return buf.toString();
@@ -313,24 +307,42 @@ public class Common {
 	}
 
 	/**
-	  * Generate Random Number1
-	  * 
-	  * @param length
-	  * @return
-	  */
-	 public static String generateRandomNumber1()
-	 {
-	  
-	  String result = null;
-	    for (int i = 1; i < 10; i++) {
-	     int Random = (int)(Math.random()*100000);
-	     result = String.valueOf(Random);
-	    }
-	    return result;
-	  
-	  //return RandomStringUtils.randomNumeric(length);
-	 }
-	
+	 * Generate Random Number1
+	 * 
+	 * @param length
+	 * @return
+	 */
+	public static String generateRandomNumber1() {
+
+		String result = null;
+		for (int i = 1; i < 10; i++) {
+			int Random = (int) (Math.random() * 100000);
+			result = String.valueOf(Random);
+		}
+		return result;
+
+		// return RandomStringUtils.randomNumeric(length);
+	}
+
+	/**
+	 * Generate Random Number 12
+	 * 
+	 * @param length
+	 * @return
+	 */
+	public static long numbGen() {
+		while (true) {
+			long numb = (long) (Math.random() * 100000000 * 1000000); // had to use this as int's are to small for a 13
+																		// digit number.
+			if (String.valueOf(numb).length() == 13)
+				return numb;
+		}
+	}
+
+	private static int random_float() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 
 	/**
 	 * Get text in a given element.
@@ -360,8 +372,6 @@ public class Common {
 		driver.get(url);
 	}
 
-	
-
 	/**
 	 * Get value of given element dynamically.
 	 * 
@@ -374,7 +384,6 @@ public class Common {
 
 		return this.findElement(locator).getAttribute("value");
 	}
-
 
 	/**
 	 * Checks if given element is being displayed on page.
@@ -481,8 +490,6 @@ public class Common {
 		}
 	}
 
-	
-
 	/**
 	 * Clears and type new value into given text-box.
 	 * 
@@ -498,12 +505,31 @@ public class Common {
 
 	}
 
-	public void makeScreenshot(WebDriver driver2, String screenshotName) {
+	public void makeScreenshot(WebDriver driver, String screenshotName) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
-	
-	
+	/**
+	 * Get Current Time
+	 * 
+	 * @return
+	 */
+
+	public String current_time() {
+
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd_MM_yyyy --- HH_mm_ss_a");
+		LocalDateTime now = LocalDateTime.now();
+		System.out.println(dtf.format(now)); // 2016/11/16 12:08:43
+		return dtf.format(now);
+	}
+
+	public void Scrollpage()
+
+	{
+		JavascriptExecutor jse = (JavascriptExecutor) driver;
+		jse.executeScript("window.scrollBy(0,500)", "");
+
+	}
 
 }

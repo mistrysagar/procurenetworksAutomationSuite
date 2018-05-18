@@ -1,9 +1,9 @@
-package test.java.com.procurenetworks.init;
+package com.procurenetworks.init;
 
 /**
  * Definitions of test statuses
  * 
- * @author DELL
+ * @author Sagar M
  * 
  */
 public interface ITestStatus {

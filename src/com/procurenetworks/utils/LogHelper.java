@@ -1,4 +1,4 @@
-package test.java.com.procurenetworks.utils;
+package com.procurenetworks.utils;
 
 import java.io.BufferedReader;
 import java.io.File;
